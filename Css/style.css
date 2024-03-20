@@ -531,7 +531,6 @@ h3.my-profession
 {
     line-height: 25px;
     font-size: 16px;
-    text-align: justify;
     color: var(--text-black-700);
 }
 
@@ -725,7 +724,7 @@ h3.my-profession
     height: 50px;
     padding: 0 50px;
 }
-@media (max-width:1199px)
+@media (max-width:1100px)
 {
     .aside
     {
@@ -757,9 +756,17 @@ h3.my-profession
     }
     .home .home-img
     {
-        display: none;
+        flex: auto;
+        align-items: center;
+        max-width: 100%;
+        margin-top: 100px;
+    }
+    .home-img::after
+    {
+        bottom: -40px;
     }
 }
+    
 @media (max-width:767px)
 {
     .contact .contact-form .col-6,
@@ -773,5 +780,12 @@ h3.my-profession
     {
         flex: 0 0 100%;
         max-width: 100%;
+    }
+}
+@media (max-width: 767px) {
+    .home .home-img {
+        flex: auto;
+        max-width: 100%;
+        height: auto;
     }
 }
